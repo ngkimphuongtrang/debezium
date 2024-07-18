@@ -1,0 +1,9 @@
+connector:
+  host: http://localhost:8083/connectors/
+  name: debezium_connector
+  plan_file: ../../etc/config/connector.json
+  topic_prefix: postgres
+  schema: public
+  db_name: debit_card
+kafka:
+  host: localhost:9092

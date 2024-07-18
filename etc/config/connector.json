@@ -1,0 +1,20 @@
+{
+  "name": "debezium_connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "admin",
+    "database.password": "admin",
+    "database.dbname": "debit_card",
+    "database.server.name": "postgres",
+    "slot.name": "product_slot",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "include.schema.changes": "false",
+    "topic.prefix": "postgres"
+  }
+}
