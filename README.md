@@ -14,15 +14,10 @@ CREATE DATABASE
 admin-user=# \c debit_card;
 You are now connected to database "debit_card" as user "admin-user".
 
-debit_card=# CREATE TABLE “debit_card” (
-debit_card(#     "Id" SERIAL PRIMARY KEY NOT NULL,
-debit_card(#     "Name" VARCHAR(100) NOT NULL,
-debit_card(#     "status" VARCHAR(20) NOT NULL
-debit_card(# );
+debit_card=# CREATE TABLE "debit_card" ("Id" SERIAL PRIMARY KEY NOT NULL, "Name" VARCHAR(100) NOT NULL,"status" VARCHAR(20));
 CREATE TABLE
 
-debit_card=# INSERT INTO "debit_card" ("Name", "Status")
-VALUES ('TRANG', "active");
+debit_card=# INSERT INTO "debit_card" ("Name") VALUES ('TRANG');
 ```
 ```
 % go run cmd/main.go
@@ -32,6 +27,7 @@ VALUES ('TRANG', "active");
 ```
 
 ## References
+https://debezium.io/documentation/reference/stable/connectors/postgresql.html#postgresql-topic-names
 https://github.com/mehmetcantas/go-kafka-debezium
 
 ## Services logs

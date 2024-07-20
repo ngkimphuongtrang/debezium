@@ -55,6 +55,7 @@ services:
     depends_on:
       - zookeeper
       - kafka
+      - postgres
 
 networks:
   kafka-network:

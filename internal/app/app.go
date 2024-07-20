@@ -40,6 +40,7 @@ func (app *App) Run() {
 		msg, err := cons.ReadMessage()
 		if err != nil {
 			log.Println(err)
+			continue
 		}
 		log.Println("Message:", msg.TopicPartition, string(msg.Value))
 	}
